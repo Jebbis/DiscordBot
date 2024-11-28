@@ -18,16 +18,15 @@ new CommandHandler({
   client,
   commandsPath: path.join(__dirname, "commands"),
   eventsPath: path.join(__dirname, "events"),
-  testServer: testServer, // To register guild-based commands (if not provided commands will be registered globally)
+  //testServer: testServer, // To register guild-based commands (if not provided commands will be registered globally)
 });
 
 (async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
     console.log("Connected to DB.");
+    client.login(process.env.TOKEN);
   } catch (error) {
     console.log(error);
   }
 })();
-
-client.login(process.env.TOKEN);

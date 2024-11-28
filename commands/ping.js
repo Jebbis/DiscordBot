@@ -10,5 +10,5 @@ module.exports = {
     interaction.reply(`Pong! ${client.ws.ping}ms`);
   },
 
-  // deleted: true, // Deletes the command from Discord (if you passed in a "testServer" property it'll delete from the guild and not globally)
+  //deleted: true, // Deletes the command from Discord (if you passed in a "testServer" property it'll delete from the guild and not globally)
 };
